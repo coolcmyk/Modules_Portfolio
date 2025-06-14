@@ -51,12 +51,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Modules/Module2_Inheritance and Access Modifiers in Java.md",
+                "file": "Practice/Module3/UML Diagram/Guide.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Module2_Inheritance and Access Modifiers in Java"
+              "title": "Guide"
             }
           },
           {
@@ -79,16 +79,16 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Modules/Module1_General Intoduction to Java, Class, Enumeration, Interface, and Github.md",
+                "file": "Practice/Module3/UML Diagram/Guide.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Module1_General Intoduction to Java, Class, Enumeration, Interface, and Github"
+              "title": "Guide"
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 5
       }
     ],
     "direction": "vertical"
@@ -145,7 +145,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 382.5026054382324
   },
   "right": {
     "id": "a581659c94544f99",
@@ -236,32 +236,33 @@
       "obsidian-excalidraw-plugin:New drawing": false
     }
   },
-  "active": "95ba191e2f7a64f5",
+  "active": "e8fc5c21c5d9e555",
   "lastOpenFiles": [
-    "Practice/Module3",
-    "Index/Pasted image 20250615043341.png",
-    "Practice/Module2/Upcasting_Downcasting/GFG_Upcasting_Downcasting.java",
-    "Practice/Module2/Upcasting_Downcasting/Child.java",
-    "Practice/Module2/Upcasting_Downcasting/Parent.java",
-    "Practice/Module2/Upcasting_Downcasting/GFG_Downcasting.java",
-    "Practice/Module2/Upcasting_Downcasting/GFG.java",
-    "Practice/Module2/Upcasting_Downcasting/GFG_Upcasting.java",
-    "Index/Pasted image 20250615042307.png",
-    "Practice/Module2/Upcasting_Downcasting",
-    "Practice/Module2/Upcasting & Downcasting/GFG.java",
-    "Practice/Module2/Upcasting & Downcasting/Parent.java",
-    "Practice/Module2/Upcasting & Downcasting",
+    "Index/Pasted image 20250615050855.png",
+    "Index/Pasted image 20250615050844.png",
+    "Index/Pasted image 20250615050858.png",
+    "Index/Pasted image 20250615050938.png",
+    "Index/Pasted image 20250615050945.png",
+    "Practice/Module3/UML Diagram/Guide.md",
+    "Modules/Module3_Encapsulation, Polymorphism, and UML Diagram.md",
     "Modules/Module1_General Intoduction to Java, Class, Enumeration, Interface, and Github.md",
-    "Index/Pasted image 20250615041934.png",
-    "Index/Pasted image 20250615041749.png",
-    "Index/Pasted image 20250615041607.png",
-    "Index/Pasted image 20250615041530.png",
     "Modules/Module2_Inheritance and Access Modifiers in Java.md",
-    "Index/Pasted image 20250615040910.png",
-    "Index/Pasted image 20250615040846.png",
-    "Assets/Pasted image 20250615040458.png",
+    "Index/Pasted image 20250615050817.png",
+    "Index/Pasted image 20250615050804.png",
+    "Index/Pasted image 20250615050752.png",
+    "Index/Pasted image 20250615050739.png",
+    "Index/Pasted image 20250615050649.png",
+    "Practice/Module3/Polymorphism/Overriding/Main.java",
+    "Practice/Module3/Polymorphism/Overloading/Main.java",
+    "Practice/Module3/Polymorphism/Overloading/Printer.java",
+    "Practice/Module3/Polymorphism/Overriding",
+    "Practice/Module3/Polymorphism/Overloading",
+    "Practice/Module3/Encapsulation/Main.java",
+    "Practice/Module3/Encapsulation/Car.java",
+    "Practice/Module3/UML Diagram",
+    "Practice/Module3/Polymorphism",
+    "Practice/Module3/Encapsulation",
     "Index/todos.md",
-    "Index/matlan(1).jpeg",
     "2025-06-14.md",
     "Matlan Penjelasan Kuis.md",
     "Excalidraw/Drawing 2025-06-14 22.16.12.excalidraw.md",

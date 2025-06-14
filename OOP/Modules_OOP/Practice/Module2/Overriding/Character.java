@@ -7,7 +7,7 @@ class Character {
 }
 
 class Mage extends Character {
-    @Override // Best practice!
+    @Override
     void useAbility() {
         System.out.println("Casting a fireball! 🔥");
     }
@@ -15,7 +15,7 @@ class Mage extends Character {
 
 class CharacterMain {
     public static void main(String[] args) {
-        //comparison between original Character class and extended class Mage
+        //Comparison between original Character class and extended class Mage
 
         Character originalChar = new Character();
         originalChar.useAbility();
