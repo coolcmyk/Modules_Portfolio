@@ -107,7 +107,7 @@ Let's build a `Computer` class and create objects from it.
 
 
 ```java=
-// Computer.java
+package Practice.Module1.Class;
 
 public class Computer {
     // 1. Fields (Properties)
@@ -119,7 +119,7 @@ public class Computer {
     public Computer(String brand, int ramInGB) {
         this.brand = brand;
         this.ramInGB = ramInGB;
-        this.isPoweredOn = false; // A computer is off by default
+        this.isPoweredOn = false;
     }
 
     // 3. Methods (Behaviors)
@@ -149,48 +149,24 @@ public class Computer {
         System.out.println("---------------------");
     }
 
-    // 4. The main method to run the program
     public static void main(String[] args) {
-        // Create two objects (instances) of the Computer class
         Computer myLaptop = new Computer("Dell", 16);
         Computer officePC = new Computer("HP", 8);
 
-        // Interact with the objects
-        myLaptop.displayInfo(); // Display initial state
-        myLaptop.powerOn();     // Turn it on
-        myLaptop.displayInfo(); // Display new state
+        myLaptop.displayInfo();
+        myLaptop.powerOn();
+        myLaptop.displayInfo();
 
-        System.out.println(); // Add a blank line for readability
+        System.out.println();
 
         officePC.displayInfo();
-        officePC.shutDown();    // Try to shut down a computer that's already off
+        officePC.shutDown();
     }
 }
 ```
 
 **Output:**
-
-```
---- Computer Info ---
-Brand: Dell
-RAM: 16GB
-Status: Off
----------------------
-Dell is powering on...
---- Computer Info ---
-Brand: Dell
-RAM: 16GB
-Status: On
----------------------
-
---- Computer Info ---
-Brand: HP
-RAM: 8GB
-Status: Off
----------------------
-HP is already off.
-```
-
+![[Pasted image 20250615041530.png]]
 ---
 
 ### **Enumeration (`enum`): For Fixed Sets of Constants** 
@@ -204,9 +180,9 @@ Enums improve type safety and code readability. Using `TrafficLight.GREEN` is mu
 Enums can have fields, constructors, and methods, making them incredibly powerful.
 
 ```java=
-// Day.java
-public enum Day {
-    // Enum constants with associated values
+package Practice.Module1.Enum;
+
+public enum Days {
     SUNDAY("Weekend"),
     MONDAY("Weekday"),
     TUESDAY("Weekday"),
@@ -215,28 +191,28 @@ public enum Day {
     FRIDAY("Weekday"),
     SATURDAY("Weekend");
 
-    // Field for each enum constant
     private final String dayType;
 
-    // Constructor (is implicitly private)
-    Day(String dayType) {
+    Days(String dayType) {
         this.dayType = dayType;
     }
 
-    // Method
     public void printDayType() {
         System.out.println(this.name() + " is a " + this.dayType);
     }
 
     public static void main(String[] args) {
-        Day today = Day.MONDAY;
-        Day weekend = Day.SATURDAY;
+        Days today = Days.MONDAY;
+        Days weekend = Days.SATURDAY;
 
-        today.printDayType();    // Output: MONDAY is a Weekday
-        weekend.printDayType();  // Output: SATURDAY is a Weekend
+        today.printDayType();    
+        weekend.printDayType(); 
     }
 }
 ```
+
+Output:
+![[Pasted image 20250615041607.png]]
 
 ---
 
@@ -258,14 +234,14 @@ Think of an interface as a job contract. It lists the duties (`work()`, `submitR
 - Since Java 8, interfaces can have `default` and `static` methods with implementations, providing more flexibility.
 
 ```java=
-// Drivable.java (Interface)
+package Practice.Module1.Interface;
+
 public interface Drivable {
     void turnOn();      // Abstract method
     void accelerate();  // Abstract method
     void brake();       // Abstract method
 }
 
-// Car.java
 class Car implements Drivable {
     @Override
     public void turnOn() {
@@ -281,7 +257,6 @@ class Car implements Drivable {
     }
 }
 
-// Bicycle.java
 class Bicycle implements Drivable {
     @Override
     public void turnOn() {
@@ -296,8 +271,20 @@ class Bicycle implements Drivable {
         System.out.println("Squeezing hand brakes.");
     }
 }
-```
 
+class DrivableImplementation {
+    public static void main(String[] args) {
+        Car newCar = new Car();
+        newCar.turnOn();
+
+        Bicycle newBike = new Bicycle();
+        newBike.turnOn();
+    }
+}
+```
+Output:
+
+![[Pasted image 20250615041749.png]]
 #### **Abstract Class: A Partial Blueprint** 
 
 An **abstract class** is a class that cannot be instantiated on its own and is meant to be subclassed. It can contain a mix of abstract methods (without a body) and concrete methods (with an implementation).
@@ -313,6 +300,8 @@ Think of an abstract class as a general concept, like `Animal`. You can't have j
 
 ```java=
 // Animal.java (Abstract Class)
+package Practice.Module1.Abstract;
+
 abstract class Animal {
     private String name;
 
@@ -332,18 +321,33 @@ abstract class Animal {
         return this.name;
     }
 }
+```
 
-// Dog.java
+```java=
+//Dog.java (Implementation)
+package Practice.Module1.Abstract;
+
 class Dog extends Animal {
     public Dog(String name) {
-        super(name); // Call the parent constructor
+        super(name); //Calls Parent Constructor
     }
     @Override
     public void makeSound() {
         System.out.println(getName() + " says: Woof!");
     }
 }
+
+class DoggoCaller {
+    public static void main(String[] args) {
+        Dog newDog = new Dog("woofie");
+        newDog.makeSound();
+        newDog.sleep();
+    }
+}
 ```
+
+Output:
+![[Pasted image 20250615041934.png]]
 
 #### **When to Use Which?**
 

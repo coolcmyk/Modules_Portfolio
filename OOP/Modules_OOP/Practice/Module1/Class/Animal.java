@@ -1,4 +1,4 @@
-package Practice.Module1;
+package Practice.Module1.Class;
 
 public class Animal {
     private int age;

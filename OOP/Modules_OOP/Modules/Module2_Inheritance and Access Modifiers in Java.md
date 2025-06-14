@@ -24,8 +24,9 @@ By using inheritance, you can avoid code duplication and build a logical hierarc
 
 In Java, you use the `extends` keyword to establish an inheritance relationship.
 
-
 ```java=
+package Practice.Module2.Extends;
+
 // Superclass
 class Vehicle {
     void drive() {
@@ -44,22 +45,19 @@ class Car extends Vehicle {
 // Main class to test the inheritance
 class Main {
     public static void main(String[] args) {
-        // Create an object of the subclass
         Car myCar = new Car();
 
-        myCar.drive(); // Calls the inherited method from Vehicle
-        myCar.honk();  // Calls its own method
+        myCar.drive(); 
+        myCar.honk(); 
     }
 }
+
+
 ```
 
 **Output:**
 
-```
-This vehicle is moving...
-Beep beep!
-```
-
+![[Pasted image 20250615040458.png]]
 ### **The `super` Keyword**
 
 The `super` keyword is used within a subclass to refer to its immediate superclass. It has two primary uses:
@@ -74,20 +72,41 @@ Method overriding occurs when a subclass provides a specific implementation for 
 It's a best practice to use the `@Override` annotation, which tells the compiler you intend to override a method. The compiler will then produce an error if you make a mistake, such as misspelling the method name.
 
 ```java=
+package Practice.Module2.Overriding;
+
+  
+
 class Character {
-    void useAbility() {
-        System.out.println("Using a generic ability.");
-    }
+	void useAbility() {
+		System.out.println("Using a generic ability.");
+	}
 }
+
+  
 
 class Mage extends Character {
-    @Override // Best practice!
-    void useAbility() {
-        System.out.println("Casting a fireball! 🔥");
-    }
+	@Override // Best practice!
+	void useAbility() {
+		System.out.println("Casting a fireball! 🔥");
+	}
+}
+
+  
+
+class CharacterMain {
+	public static void main(String[] args) {
+		//comparison between original Character class and extended class Mage
+		Character originalChar = new Character();
+		originalChar.useAbility();
+
+		Mage newMage = new Mage();
+		newMage.useAbility();
+
+	}
 }
 ```
-
+Output:
+![[Pasted image 20250615040846.png]]
 ### **Types of Inheritance in Java**
 
 Java supports several types of inheritance, primarily through classes and interfaces.
@@ -129,7 +148,76 @@ if (parent instanceof Child) {
     child.childSpecificMethod(); // Now you can access Child-specific methods
 }
 ```
+Example:
 
+Parent.java
+```java=
+package Practice.Module2.Upcasting_Downcasting;
+
+// Parent class
+class Parent {
+    String name;
+
+    void method()
+    {
+        System.out.println("Method from Parent");
+    }
+}
+```
+
+Child.java
+```java=
+package Practice.Module2.Upcasting_Downcasting;
+
+// Child class
+class Child extends Parent {
+    int id;
+
+    // Overriding the parent method
+    // to print the signature of the
+    // child class
+    @Override void method()
+    {
+        System.out.println("Method from Child");
+    }
+}
+```
+
+GFG_Upcasting_Downcasting.java
+```java=
+package Practice.Module2.Upcasting_Downcasting;
+
+// Demo class to see the difference
+// between upcasting and downcasting
+public class GFG_Upcasting_Downcasting {
+
+    // Driver code
+    public static void main(String[] args)
+    {
+        // Upcasting
+        Parent p = new Child();
+        p.name = "GeeksforGeeks";
+
+        //Printing the parentclass name
+        System.out.println(p.name);
+        //parent class method is overridden method hence this will be executed
+        p.method();
+
+        // Trying to Downcasting Implicitly
+        // Child c = new Parent(); - > compile time error
+
+        // Downcasting Explicitly
+        Child c = (Child)p;
+
+        c.id = 1;
+        System.out.println(c.name);
+        System.out.println(c.id);
+        c.method();
+    }
+}
+```
+Output:
+![[Pasted image 20250615043341.png]]
 ---
 
 ## **Access Modifiers**
