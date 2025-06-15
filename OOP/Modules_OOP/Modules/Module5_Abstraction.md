@@ -28,100 +28,92 @@ Java provides two main tools to implement abstraction:
 Let's look at an example using an abstract class. The `Vehicle` class defines the general idea of a vehicle, but you can't create a generic "Vehicle" object. Instead, you create specific types like `Car` or `ElectricScooter`, which provide their own unique implementation for the `start()` method.
 
 ```java
-// abstract_example/Vehicle.java
-
-// An abstract class serves as a blueprint and cannot be instantiated directly.
-abstract class Vehicle {
-    private String brand;
-
-    // Constructor to initialize the brand
-    public Vehicle(String brand) {
-        this.brand = brand;
-    }
-
-    // A public getter provides access to the private 'brand' field.
-    public String getBrand() {
-        return this.brand;
-    }
-
-    // A public setter allows modification of the private 'brand' field.
-    public void setBrand(String brand) {
-        this.brand = brand;
-    }
-
-    // An abstract method has no implementation.
-    // Subclasses are forced to provide their own implementation.
-    abstract void start();
+package Practice.Module5.Abstraction;  
+  
+// An abstract class serves as a blueprint and cannot be instantiated directly.  
+abstract class Vehicle {  
+    private String brand;  
+  
+    // Constructor to initialize the brand  
+    public Vehicle(String brand) {  
+        this.brand = brand;  
+    }  
+  
+    // A public getter provides access to the private 'brand' field.  
+    public String getBrand() {  
+        return this.brand;  
+    }  
+  
+    // A public setter allows modification of the private 'brand' field.  
+    public void setBrand(String brand) {  
+        this.brand = brand;  
+    }  
+  
+    // An abstract method has no implementation.  
+    // Subclasses are forced to provide their own implementation.    abstract void start();  
 }
 ```
 
 ```java
-// abstract_example/Car.java
-
-// 'Car' is a concrete subclass that inherits from Vehicle.
-class Car extends Vehicle {
-
-    public Car(String brand) {
-        super(brand); // Calls the constructor of the parent class (Vehicle)
-    }
-
-    // Provides a specific implementation for the abstract 'start' method.
-    @Override
-    void start() {
-        System.out.println(getBrand() + " car is starting with a key. 🔑");
-    }
+package Practice.Module5.Abstraction;  
+  
+// 'Car' is a concrete subclass that inherits from Vehicle.  
+class Car extends Vehicle {  
+  
+    public Car(String brand) {  
+        super(brand); // Calls the constructor of the parent class (Vehicle)  
+    }  
+  
+    // Provides a specific implementation for the abstract 'start' method.  
+    @Override  
+    void start() {  
+        System.out.println(getBrand() + " car is starting with a key. 🔑");  
+    }  
 }
 ```
 
 ```java
-// abstract_example/ElectricScooter.java
-
-// 'ElectricScooter' is another concrete subclass.
-class ElectricScooter extends Vehicle {
-
-    public ElectricScooter(String brand) {
-        super(brand);
-    }
-
-    // Provides a different implementation for the 'start' method.
-    @Override
-    void start() {
-        System.out.println(getBrand() + " electric scooter is starting with a button. 🛴");
-    }
+package Practice.Module5.Abstraction;  
+  
+// 'ElectricScooter' is another concrete subclass.  
+class ElectricScooter extends Vehicle {  
+  
+    public ElectricScooter(String brand) {  
+        super(brand);  
+    }  
+  
+    // Provides a different implementation for the 'start' method.  
+    @Override  
+    void start() {  
+        System.out.println(getBrand() + " electric scooter is starting with a button. 🛴");  
+    }  
 }
 ```
 
 ```java
-// abstract_example/Main.java
-
-public class Main {
-    public static void main(String[] args) {
-        // We can create objects of the concrete subclasses.
-        Vehicle myCar = new Car("Toyota");
-        Vehicle myScooter = new ElectricScooter("Xiaomi");
-
-        // The correct 'start()' method is called for each object at runtime.
-        myCar.start();
-        myScooter.start();
-
-        System.out.println("---");
-
-        // We can still use the methods from the abstract superclass.
-        System.out.println("Original car brand: " + myCar.getBrand());
-        myCar.setBrand("Honda");
-        System.out.println("New car brand: " + myCar.getBrand());
-    }
+package Practice.Module5.Abstraction;  
+  
+public class Main {  
+    public static void main(String[] args) {  
+        // We can create objects of the concrete subclasses.  
+        Vehicle myCar = new Car("Toyota");  
+        Vehicle myScooter = new ElectricScooter("Xiaomi");  
+  
+        // The correct 'start()' method is called for each object at runtime.  
+        myCar.start();  
+        myScooter.start();  
+  
+        System.out.println("---");  
+  
+        // We can still use the methods from the abstract superclass.  
+        System.out.println("Original car brand: " + myCar.getBrand());  
+        myCar.setBrand("Honda");  
+        System.out.println("New car brand: " + myCar.getBrand());  
+    }  
 }
 ```
 
 **Output:**
 
-```
-Toyota car is starting with a key. 🔑
-Xiaomi electric scooter is starting with a button. 🛴
----
-Original car brand: Toyota
-New car brand: Honda
-```
-
+![[Pasted image 20250615130227.png]]
 In this example, the `Main` class interacts with both `Car` and `ElectricScooter` objects through the common `Vehicle` type. It doesn't need to know the specific details of how each vehicle starts—it just calls the `start()` method. This is the power of abstraction in action.

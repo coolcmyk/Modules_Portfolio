@@ -29,31 +29,33 @@ You define a generic type using angle brackets (`<>`) with a type parameter insi
 Here is a `Box` class that can hold an object of any type.
 
 ```java
-// The <T> is a type parameter that will be replaced by a real type.
-public class Box<T> {
-    private T value; // The type of 'value' is T
-
-    public Box(T value) {
-        this.value = value;
-    }
-
-    public T getValue() {
-        return value;
-    }
-
-    public void setValue(T value) {
-        this.value = value;
-    }
-
-    public static void main(String[] args) {
-        // Create a Box for Integers
-        Box<Integer> integerBox = new Box<>(10);
-        System.out.println("Integer Value: " + integerBox.getValue());
-
-        // Create a Box for Strings
-        Box<String> stringBox = new Box<>("Hello World");
-        System.out.println("String Value: " + stringBox.getValue());
-    }
+package Practice.Module4.Generic;  
+  
+// The <T> is a type parameter that will be replaced by a real type.  
+public class Box<T> {  
+    private T value; // The type of 'value' is T  
+  
+    public Box(T value) {  
+        this.value = value;  
+    }  
+  
+    public T getValue() {  
+        return value;  
+    }  
+  
+    public void setValue(T value) {  
+        this.value = value;  
+    }  
+  
+    public static void main(String[] args) {  
+        // Create a Box for Integers  
+        Box<Integer> integerBox = new Box<>(10);  
+        System.out.println("Integer Value: " + integerBox.getValue());  
+  
+        // Create a Box for Strings  
+        Box<String> stringBox = new Box<>("Hello World");  
+        System.out.println("String Value: " + stringBox.getValue());  
+    }  
 }
 ```
 
@@ -62,30 +64,32 @@ public class Box<T> {
 You can also create methods that accept a generic type.
 
 ```java
-public class GenericMethodTest {
-    // A generic method uses a type parameter before the return type.
-    public static <E> void printArray(E[] inputArray) {
-        for (E element : inputArray) {
-            System.out.printf("%s ", element);
-        }
-        System.out.println();
-    }
-
-    public static void main(String[] args) {
-        // Create arrays of different wrapper types
-        Integer[] intArray = { 1, 2, 3, 4, 5 };
-        Double[] doubleArray = { 1.1, 2.2, 3.3, 4.4 };
-        Character[] charArray = { 'H', 'E', 'L', 'L', 'O' };
-
-        System.out.println("Integer Array contains:");
-        printArray(intArray); // The compiler infers that E is Integer
-
-        System.out.println("\nDouble Array contains:");
-        printArray(doubleArray); // The compiler infers that E is Double
-
-        System.out.println("\nCharacter Array contains:");
-        printArray(charArray); // The compiler infers that E is Character
-    }
+package Practice.Module4.Generic;  
+  
+public class GenericMethodTest {  
+    // A generic method uses a type parameter before the return type.  
+    public static <E> void printArray(E[] inputArray) {  
+        for (E element : inputArray) {  
+            System.out.printf("%s ", element);  
+        }  
+        System.out.println();  
+    }  
+  
+    public static void main(String[] args) {  
+        // Create arrays of different wrapper types  
+        Integer[] intArray = { 1, 2, 3, 4, 5 };  
+        Double[] doubleArray = { 1.1, 2.2, 3.3, 4.4 };  
+        Character[] charArray = { 'H', 'E', 'L', 'L', 'O' };  
+  
+        System.out.println("Integer Array contains:");  
+        printArray(intArray); // The compiler infers that E is Integer  
+  
+        System.out.println("\nDouble Array contains:");  
+        printArray(doubleArray); // The compiler infers that E is Double  
+  
+        System.out.println("\nCharacter Array contains:");  
+        printArray(charArray); // The compiler infers that E is Character  
+    }  
 }
 ```
 
@@ -112,22 +116,24 @@ A **`List`** is an **ordered** collection of elements that allows **duplicates**
 
 **`List` Example:**
 ```java
-import java.util.ArrayList;
-import java.util.List;
-
-public class ListExample {
-    public static void main(String[] args) {
-        // Create a List of Strings using ArrayList
-        List<String> names = new ArrayList<>();
-        names.add("Kamal");
-        names.add("Emir");
-        names.add("Fairuz");
-
-        System.out.println("Names in the list:");
-        for (String name : names) {
-            System.out.println(name);
-        }
-    }
+package Practice.Module4.Collection;  
+  
+import java.util.ArrayList;  
+import java.util.List;  
+  
+public class ListExample {  
+    public static void main(String[] args) {  
+        // Create a List of Strings using ArrayList  
+        List<String> names = new ArrayList<>();  
+        names.add("Kamal");  
+        names.add("Emir");  
+        names.add("Fairuz");  
+  
+        System.out.println("Names in the list:");  
+        for (String name : names) {  
+            System.out.println(name);  
+        }  
+    }  
 }
 ```
 
@@ -140,24 +146,26 @@ A **`Set`** is a collection that contains **no duplicate** elements. It makes no
 
 **`Set` Example:**
 ```java
-import java.util.HashSet;
-import java.util.Set;
-
-public class SetExample {
-    public static void main(String[] args) {
-        // Create a Set of Strings using HashSet
-        Set<String> uniqueNames = new HashSet<>();
-        uniqueNames.add("Kamal");
-        uniqueNames.add("Emir");
-        uniqueNames.add("Fairuz");
-        uniqueNames.add("Kamal"); // This duplicate will be ignored
-
-        System.out.println("Unique names in the set:");
-        for (String name : uniqueNames) {
-            System.out.println(name);
-        }
-        System.out.println("Size of set: " + uniqueNames.size()); // Will be 3
-    }
+package Practice.Module4.Collection;  
+  
+import java.util.HashSet;  
+import java.util.Set;  
+  
+public class SetExample {  
+    public static void main(String[] args) {  
+        // Create a Set of Strings using HashSet  
+        Set<String> uniqueNames = new HashSet<>();  
+        uniqueNames.add("Kamal");  
+        uniqueNames.add("Emir");  
+        uniqueNames.add("Fairuz");  
+        uniqueNames.add("Kamal"); // This duplicate will be ignored  
+  
+        System.out.println("Unique names in the set:");  
+        for (String name : uniqueNames) {  
+            System.out.println(name);  
+        }  
+        System.out.println("Size of set: " + uniqueNames.size()); // Will be 3  
+    }  
 }
 ```
 
@@ -170,23 +178,25 @@ A **`Map`** is an object that maps **keys** to **values**. Keys must be unique, 
 
 **`Map` Example:**
 ```java
-import java.util.HashMap;
-import java.util.Map;
-
-public class MapExample {
-    public static void main(String[] args) {
-        // Create a Map with String keys and Integer values
-        Map<String, Integer> scores = new HashMap<>();
-        scores.put("Kamal", 100);
-        scores.put("Emir", 90);
-        scores.put("Fairuz", 80);
-
-        System.out.println("Student scores:");
-        // Iterate over the keys to get the values
-        for (String name : scores.keySet()) {
-            int score = scores.get(name);
-            System.out.println(name + ": " + score);
-        }
-    }
+package Practice.Module4.Collection;  
+  
+import java.util.HashMap;  
+import java.util.Map;  
+  
+public class MapExample {  
+    public static void main(String[] args) {  
+        // Create a Map with String keys and Integer values  
+        Map<String, Integer> scores = new HashMap<>();  
+        scores.put("Kamal", 100);  
+        scores.put("Emir", 90);  
+        scores.put("Fairuz", 80);  
+  
+        System.out.println("Student scores:");  
+        // Iterate over the keys to get the values  
+        for (String name : scores.keySet()) {  
+            int score = scores.get(name);  
+            System.out.println(name + ": " + score);  
+        }  
+    }  
 }
 ```
