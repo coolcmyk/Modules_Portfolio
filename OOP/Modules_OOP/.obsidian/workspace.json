@@ -79,12 +79,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Practice/Module3/UML Diagram/Guide.md",
+                "file": "Modules/Module8_Collider Triggers, Game Manager, and Level Manager.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Guide"
+              "title": "Module8_Collider Triggers, Game Manager, and Level Manager"
             }
           }
         ],
@@ -145,7 +145,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 382.5026054382324
+    "width": 445.5
   },
   "right": {
     "id": "a581659c94544f99",
@@ -238,30 +238,37 @@
   },
   "active": "e8fc5c21c5d9e555",
   "lastOpenFiles": [
+    "Modules/Module4_Generic Type and Collection.md",
+    "Modules/Module5_Abstraction.md",
+    "Modules/Module6_Higher Level Abstraction.md",
+    "Modules/Module7_Unity.md",
+    "Modules/Module8_Collider Triggers, Game Manager, and Level Manager.md",
+    "Modules/Module8.md",
+    "Practice/out/production/Practice/Practice/Module3/Polymorphism/Overriding/Main.class",
+    "Practice/out/production/Practice/Practice/Module3/Polymorphism/Overriding/Dog.class",
+    "Practice/out/production/Practice/Practice/Module3/Polymorphism/Overriding/Cat.class",
+    "Practice/out/production/Practice/Practice/Module3/Polymorphism/Overriding/Animal.class",
+    "Practice/out/production/Practice/Practice/Module3/Polymorphism/Overloading/Printer.class",
+    "Practice/out/production/Practice/Practice/Module3/Polymorphism/Overloading/Main.class",
+    "Practice/out/production/Practice/Practice/Module3/Polymorphism/Overriding",
+    "Practice/out/production/Practice/Practice/Module3/Polymorphism/Overloading",
+    "Practice/out/production/Practice/Practice/Module3/Polymorphism",
+    "Practice/out/production/Practice/Practice/Module3/Encapsulation/Main.class",
+    "Practice/out/production/Practice/Practice/Module3/UML Diagram/Guide.md",
+    "Modules/Module3_Encapsulation, Polymorphism, and UML Diagram.md",
+    "Modules/Module1_General Intoduction to Java, Class, Enumeration, Interface, and Github.md",
+    "Modules/Module2_Inheritance and Access Modifiers in Java.md",
+    "Practice/Module3/UML Diagram/Guide.md",
     "Index/Pasted image 20250615050855.png",
     "Index/Pasted image 20250615050844.png",
     "Index/Pasted image 20250615050858.png",
     "Index/Pasted image 20250615050938.png",
     "Index/Pasted image 20250615050945.png",
-    "Practice/Module3/UML Diagram/Guide.md",
-    "Modules/Module3_Encapsulation, Polymorphism, and UML Diagram.md",
-    "Modules/Module1_General Intoduction to Java, Class, Enumeration, Interface, and Github.md",
-    "Modules/Module2_Inheritance and Access Modifiers in Java.md",
     "Index/Pasted image 20250615050817.png",
     "Index/Pasted image 20250615050804.png",
     "Index/Pasted image 20250615050752.png",
     "Index/Pasted image 20250615050739.png",
     "Index/Pasted image 20250615050649.png",
-    "Practice/Module3/Polymorphism/Overriding/Main.java",
-    "Practice/Module3/Polymorphism/Overloading/Main.java",
-    "Practice/Module3/Polymorphism/Overloading/Printer.java",
-    "Practice/Module3/Polymorphism/Overriding",
-    "Practice/Module3/Polymorphism/Overloading",
-    "Practice/Module3/Encapsulation/Main.java",
-    "Practice/Module3/Encapsulation/Car.java",
-    "Practice/Module3/UML Diagram",
-    "Practice/Module3/Polymorphism",
-    "Practice/Module3/Encapsulation",
     "Index/todos.md",
     "2025-06-14.md",
     "Matlan Penjelasan Kuis.md",
